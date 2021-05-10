@@ -1,18 +1,23 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status ]
+  layout "blog"
 
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "My portfolio Blog"
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+
   end
 
   # GET /blogs/1/edit
@@ -22,6 +27,7 @@ class BlogsController < ApplicationController
   # POST /blogs or /blogs.json
   def create
     @blog = Blog.new(blog_params)
+    @blog.topic = Topic.last
 
     respond_to do |format|
       if @blog.save
