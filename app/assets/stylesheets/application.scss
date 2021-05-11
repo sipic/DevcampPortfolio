@@ -59,11 +59,15 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* Padding for spacing */
 .inner {
   padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
@@ -147,5 +151,10 @@ body {
 } 
 .auth-links a{
   color: black;
+}
+.card {
+  margin: 100px 0px;
+  width: 750px;
+
 }
 
