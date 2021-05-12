@@ -161,9 +161,12 @@ body {
 }
 
 .row {
-  margin: 0;
+  margin: 0 auto;
 }
 .register-text {
   text-align: right;
 }
 
+.login > .card {
+  width: 22rem;
+}
