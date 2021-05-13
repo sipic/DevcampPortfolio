@@ -7,9 +7,16 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import Sortable from "html.sortable"
 //* require jquery
 //*require bootstrap
+//= require jquery
+//= require bootstrap-sprockets
+//= require jquery_ujs
+//= require jquery-ui
 
 Rails.start()
+Sortable.start()
 Turbolinks.start()
 ActiveStorage.start()
+
